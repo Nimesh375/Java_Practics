@@ -1,0 +1,33 @@
+package org.example;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        //Import Random Number
+
+        Random Num = new Random();
+        int randomNum = Num.nextInt(100) + 1;
+        System.out.println("I think a number between 1 to 100");
+
+
+        //Getting user Number
+        System.out.println("Enter your guess");
+        Scanner one = new Scanner(System.in);
+        int X = one.nextInt();
+
+        while (X!=randomNum)
+            //Compare with user Number
+
+            if (X == randomNum) {
+                System.out.println("You win");
+            } else if (X > randomNum) {
+                System.out.println("It is higher than my number");
+            } else {
+                System.out.println("It is lower than My number");
+            }
+
+        }
+    }
